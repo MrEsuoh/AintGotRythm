@@ -3,6 +3,7 @@ package com.teamdraco.aintgotrythm.init;
 import com.teamdraco.aintgotrythm.AintGotRythm;
 import com.teamdraco.aintgotrythm.objects.items.ModSpawnEggs;
 import com.teamdraco.aintgotrythm.objects.items.ModMusicDiscItem;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.Rarity;
 import net.minecraftforge.fml.RegistryObject;
@@ -14,6 +15,9 @@ public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AintGotRythm.MOD_ID);
 
     //Items
+
+    public static final RegistryObject<Item> WHEAT_CRISPY = ITEMS.register("wheat_crispy",
+            () -> new Item(new Item.Properties().group(AintGotRythm.GROUP).food(new Food.Builder().hunger(2).saturation(0.5f).build())));
 
    /* public static final RegistryObject<Item> SHELLAC = ITEMS.register("shellac",
             () -> new Item(new Item.Properties().group(AintGotRythm.GROUP))); */
@@ -28,5 +32,7 @@ public class ItemInit {
     public static final RegistryObject<ModSpawnEggs> JUAN_SPAWN_EGG = ITEMS.register("juan_spawn_egg",
             () -> new ModSpawnEggs(ModEntities.JUAN_ENTITY, 0x2a2e33, 0x9fa2a6,
                     new Item.Properties().group(AintGotRythm.GROUP).maxStackSize(16)));
+
+
 
 }
