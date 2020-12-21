@@ -1,0 +1,13 @@
+{
+  "disc.ambient_ender": {
+    "category": "disc",
+    "subtitle": "ambient_ender",
+    "sounds": [
+      {
+        "name": "aintgotrythm:disc/ambient_ender",
+        "stream": true,
+        "attenuation_distance": 10.0
+      }
+    ]
+  }
+}
