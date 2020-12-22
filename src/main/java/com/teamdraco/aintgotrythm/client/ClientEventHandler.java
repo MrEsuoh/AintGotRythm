@@ -1,7 +1,8 @@
 package com.teamdraco.aintgotrythm.client;
 
 import com.teamdraco.aintgotrythm.AintGotRythm;
-import com.teamdraco.aintgotrythm.client.render.JuanEntityRender;
+import com.teamdraco.aintgotrythm.client.render.JuanRender;
+import com.teamdraco.aintgotrythm.client.render.LilPPRender;
 import com.teamdraco.aintgotrythm.init.ModEntities;
 import com.teamdraco.aintgotrythm.objects.items.ModSpawnEggs;
 import net.minecraft.client.renderer.color.IItemColor;
@@ -17,7 +18,8 @@ import net.minecraftforge.fml.common.Mod;
 public class ClientEventHandler {
     @OnlyIn(Dist.CLIENT)
     public static void init() {
-        RenderingRegistry.registerEntityRenderingHandler(ModEntities.JUAN_ENTITY.get(), JuanEntityRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntities.JUAN.get(), JuanRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntities.LIL_PP.get(), LilPPRender::new);
     }
 
     @SubscribeEvent

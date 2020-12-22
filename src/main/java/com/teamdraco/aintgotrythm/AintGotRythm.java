@@ -7,6 +7,7 @@ import com.teamdraco.aintgotrythm.init.ModEntities;
 import com.teamdraco.aintgotrythm.init.SoundInit;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
+import net.minecraft.entity.merchant.villager.WanderingTraderEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -56,7 +57,8 @@ public class AintGotRythm
 
     private void registerCommon(FMLCommonSetupEvent event) {
         registerEntityAttributes();
-        EntitySpawnPlacementRegistry.register(ModEntities.JUAN_ENTITY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::canAnimalSpawn);
+        EntitySpawnPlacementRegistry.register(ModEntities.JUAN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::canAnimalSpawn);
+        EntitySpawnPlacementRegistry.register(ModEntities.LIL_PP.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, WanderingTraderEntity::canSpawnOn);
     }
 
     private void registerClient(final FMLClientSetupEvent event) {
@@ -64,7 +66,8 @@ public class AintGotRythm
     }
 
     private void registerEntityAttributes() {
-        GlobalEntityTypeAttributes.put(ModEntities.JUAN_ENTITY.get(), JuanEntity.func_234176_m_().create());
+        GlobalEntityTypeAttributes.put(ModEntities.JUAN.get(), JuanEntity.func_234176_m_().create());
+        GlobalEntityTypeAttributes.put(ModEntities.LIL_PP.get(), JuanEntity.func_234176_m_().create());
     }
 
 }

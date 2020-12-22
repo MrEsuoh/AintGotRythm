@@ -40,7 +40,7 @@ public class JuanEntity extends AnimalEntity {
     @Nullable
     @Override
     public AgeableEntity func_241840_a(ServerWorld world, AgeableEntity ageable) {
-        return ModEntities.JUAN_ENTITY.get().create(world);
+        return ModEntities.JUAN.get().create(world);
     }
 
     @Override

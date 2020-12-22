@@ -2,10 +2,13 @@
     "itemGroup.aintgotrythm": "Music Mania",
 
     "item.aintgotrythm.shellac": "Shellac",
+    "item.aintgotrythm.wheat_crisper": "Wheat Crisper",
     "item.aintgotrythm.music_disc_ambient_ender": "Music Disc",
     "item.aintgotrythm.music_disc_ambient_ender.desc": "Mr. Esuoh - Ambient Ender",
 
     "item.aintgotrythm.juan_spawn_egg": "Juan Spawn Egg",
+    "item.aintgotrythm.lil_pp_spawn_egg": "Lil' PP Spawn Egg",
 
-    "entity.aintgotrythm.juan_entity": "Juan"
+    "entity.aintgotrythm.juan": "Juan",
+    "entity.aintgotrythm.lil_pp": "Lil' PP"
 }
